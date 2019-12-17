@@ -18,11 +18,13 @@ public struct MiniBuffer: View {
     }
 
     public var body: some View {
+        let result: Text
         if let buffer = buffer {
-            return Text(buffer.label ?? "\(String(format: "%02X", buffer.contents().hashValue)) \(buffer.length) bytes")
+            result = Text(buffer.label ?? "\(String(format: "%02X", buffer.contents().hashValue)) \(buffer.length) bytes")
         } else {
-            return Text("Nil Buffer")
+            result = Text("Nil Buffer")
         }
+        return result.border(Color.white)
     }
 }
 

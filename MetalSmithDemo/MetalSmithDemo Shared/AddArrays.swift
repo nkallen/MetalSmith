@@ -29,7 +29,7 @@ struct AddArrays_Previews: PreviewProvider {
                 Buffer(inB)
                 Buffer(result, of: Float.self, count: count).copy()
             }
-            .previewDisplayName("Buffers before function invocation")
+            .previewDisplayName("Buffers before fn invocation")
             CommandBuffer() {
                 AddArrays()
                     .inA(inA)
@@ -43,7 +43,7 @@ struct AddArrays_Previews: PreviewProvider {
                     .dispatch(width: count)
             }
             Buffer(result, of: Float.self, count: count)
-                .previewDisplayName("Result buffer after invocation")
+                .previewDisplayName("Result buffer afters")
         }
         .previewLayout(.sizeThatFits)
         .environmentObject(environment)

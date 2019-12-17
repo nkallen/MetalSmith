@@ -37,6 +37,8 @@
 		9E81192123A8532E00666177 /* HelloTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E81192023A8532E00666177 /* HelloTriangle.swift */; };
 		9E81192223A853B900666177 /* HelloTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E81192023A8532E00666177 /* HelloTriangle.swift */; };
 		9E81194A23A8EED500666177 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E81194823A8EED500666177 /* Main.storyboard */; };
+		9E9CCBFF23A911910039BDFD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9E9CCBFE23A911910039BDFD /* README.md */; };
+		9E9CCC0223A91B0D0039BDFD /* livecoding.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9E9CCC0123A91B0D0039BDFD /* livecoding.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,9 @@
 		9E81191E23A851B200666177 /* DynamicLibraryLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicLibraryLoading.swift; sourceTree = "<group>"; };
 		9E81192023A8532E00666177 /* HelloTriangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloTriangle.swift; sourceTree = "<group>"; };
 		9E81194923A8EED500666177 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../Test/Test/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9E9CCBFE23A911910039BDFD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		9E9CCC0123A91B0D0039BDFD /* livecoding.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = livecoding.gif; sourceTree = "<group>"; };
+		9E9CCC0323A91B570039BDFD /* add-arrays.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-arrays.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +93,8 @@
 		9E81189B23A7C68E00666177 = {
 			isa = PBXGroup;
 			children = (
+				9E9CCC0023A91AE20039BDFD /* Resources */,
+				9E9CCBFE23A911910039BDFD /* README.md */,
 				9E8118A023A7C68E00666177 /* MetalSmithDemo Shared */,
 				9E8118AB23A7C69000666177 /* MetalSmithDemo iOS */,
 				9E8118BC23A7C69000666177 /* MetalSmithDemo macOS */,
@@ -164,6 +171,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E9CCC0023A91AE20039BDFD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9E9CCC0123A91B0D0039BDFD /* livecoding.gif */,
+				9E9CCC0323A91B570039BDFD /* add-arrays.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +275,8 @@
 			files = (
 				9E8118FC23A7CFFE00666177 /* View.stencil in Resources */,
 				9E8118CB23A7C69000666177 /* Assets.xcassets in Resources */,
+				9E9CCC0223A91B0D0039BDFD /* livecoding.gif in Resources */,
+				9E9CCBFF23A911910039BDFD /* README.md in Resources */,
 				9E8118FB23A7CFFE00666177 /* Encoder.stencil in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
