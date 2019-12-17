@@ -91,8 +91,8 @@ struct AddArrays_Previews: PreviewProvider {
         .environmentObject(environment)
     }
 }
-<img src="Resources/add-arrays.png">
 ```
+<img src="Resources/add-arrays.png">
 In the above example `AddArrays` is a thin-wrapper class around the `AddArraysEncoder` class we saw earlier. It's also made with just code-generation. It conforms to SwiftUI's `View` protocol. Note, additionally, that we're passing in vanilla `[Float]` arrays for `inA` and `inB`. These are just convenience functions for testing your code in the SwiftUI preview canvas.
 
 The `Buffer` View class visualizes `MTLBuffers` and `UnsafeBufferPointers`. It can visualize buffers of scalars like `Float` and (using some Swift-reflection-voodoo) buffers of `structs`, displaying their fields. Similarly there is a `Texture` view class that visualizes `MTLTextures`.
