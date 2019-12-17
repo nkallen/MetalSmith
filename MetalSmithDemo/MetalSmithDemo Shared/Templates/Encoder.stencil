@@ -1,0 +1,78 @@
+import MetalKit
+import MetalSmith
+
+{% macro swiftifyMethodName name %}{{ name | replace:"(","_" | replace:")","" | replace:":","_" | replace:"`","" | snakeToCamelCase | lowerFirstWord }}{% endmacro %}
+
+{% for function in functions.kernels %}
+struct {{ function.name|snakeToCamelCase }}Encoder {
+    struct ArgumentEncoder: MetalSmith.ArgumentEncoder {
+        let commandEncoder: MTLComputeCommandEncoder
+        let computePipelineState: MTLComputePipelineState
+    {% for argument in function.arguments %}
+
+        {% if argument.type == "texture" %}
+        func {% call swiftifyMethodName argument.name %}(_ {% call swiftifyMethodName argument.name %}: MTLTexture?) {
+            commandEncoder.setTexture({% call swiftifyMethodName argument.name %}, index: {{argument.index}})
+        }
+        {% elif argument.type == "buffer" %}
+        func {% call swiftifyMethodName argument.name %}(_ {% call swiftifyMethodName argument.name %}: MTLBuffer?, offset: Int = 0) {
+            commandEncoder.setBuffer({% call swiftifyMethodName argument.name %}, offset: offset, index: {{argument.index}})
+        }
+
+        func {% call swiftifyMethodName argument.name %}(_ {% call swiftifyMethodName argument.name %}: UnsafeRawPointer, length: Int) {
+            commandEncoder.setBytes({% call swiftifyMethodName argument.name %}, length: length, index: {{argument.index}})
+        }
+
+        func {% call swiftifyMethodName argument.name %}(_ {% call swiftifyMethodName argument.name %}: UnsafeBufferPointer<{{argument.bufferDataType.swiftName}}>) {
+            if let baseAddress = {% call swiftifyMethodName argument.name %}.baseAddress {
+                self.{% call swiftifyMethodName argument.name %}(baseAddress, length: {% call swiftifyMethodName argument.name %}.count * MemoryLayout<{{argument.bufferDataType.swiftName}}>.stride)
+            }
+        }
+
+        func {% call swiftifyMethodName argument.name %}(_ {% call swiftifyMethodName argument.name %}: Array<{{argument.bufferDataType.swiftName}}>) {
+            {% call swiftifyMethodName argument.name %}.withUnsafeBufferPointer {
+                self.{% call swiftifyMethodName argument.name %}($0)
+            }
+        }
+
+        func {% call swiftifyMethodName argument.name %}(_ {% call swiftifyMethodName argument.name %}: {{argument.bufferDataType.swiftName}}) {
+            var {% call swiftifyMethodName argument.name %} = {% call swiftifyMethodName argument.name %}
+            commandEncoder.setBytes(&{% call swiftifyMethodName argument.name %}, length: MemoryLayout<{{argument.bufferDataType.swiftName}}>.stride, index: {{argument.index}})
+        }
+        {% endif %}
+    {% endfor %}
+
+        func dispatch(width: Int = 1, height: Int = 1, depth: Int = 1) {
+            let threadsPerGrid = MTLSize(width: width, height: height, depth: depth)
+            dispatch(threadsPerGrid)
+        }
+
+        func dispatch(_ threadsPerGrid: MTLSize) {
+            let threadGroupWidth = computePipelineState.maxTotalThreadsPerThreadgroup
+            let threadsPerThreadgroup = MTLSizeMake(threadGroupWidth, 1, 1)
+
+            commandEncoder.dispatchThreads(threadsPerGrid, threadsPerThreadgroup: threadsPerThreadgroup)
+            commandEncoder.endEncoding()
+        }
+    }
+
+    let computePipelineState: MTLComputePipelineState
+
+    init?(library: MTLLibrary) {
+        if let function = library.makeFunction(name: "{{function.name}}"),
+            let computePipelineState = try? library.device.makeComputePipelineState(function: function) {
+            self.computePipelineState = computePipelineState
+        } else {
+            return nil
+        }
+    }
+
+    func commandBuffer(_ commandBuffer: MTLCommandBuffer) -> ArgumentEncoder? {
+        if let commandEncoder = commandBuffer.makeComputeCommandEncoder() {
+            commandEncoder.setComputePipelineState(computePipelineState)
+            return ArgumentEncoder(commandEncoder: commandEncoder, computePipelineState: computePipelineState)
+        }
+        return nil
+    }
+}
+{% endfor %}

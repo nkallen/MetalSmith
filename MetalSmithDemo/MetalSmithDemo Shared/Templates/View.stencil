@@ -1,0 +1,100 @@
+import MetalKit
+import MetalSmith
+import SwiftUI
+import MetalSmithUI
+
+{% macro swiftifyMethodName name %}{{ name | replace:"(","_" | replace:")","" | replace:":","_" | replace:"`","" | snakeToCamelCase | lowerFirstWord }}{% endmacro %}
+
+{% for function in functions.kernels %}
+struct {{ function.name|snakeToCamelCase }}: CommandEncoder {
+    var threadsPerGrid: MTLSize?
+
+    {% for argument in function.arguments %}
+    var set_{% call swiftifyMethodName argument.name %}: (({{ function.name|snakeToCamelCase }}Encoder.ArgumentEncoder) -> Void)? = nil
+    var view_{% call swiftifyMethodName argument.name %}: AnyView? = nil
+    {% endfor %}
+
+    {% for argument in function.arguments %}
+    {% if argument.type == "texture" %}
+    func {% call swiftifyMethodName argument.name %}(_ {% call swiftifyMethodName argument.name %}: MTLTexture?) -> Self {
+        var __result = self
+        __result.set_{% call swiftifyMethodName argument.name %} = { argumentEncoder in
+            argumentEncoder.{% call swiftifyMethodName argument.name %}({% call swiftifyMethodName argument.name %})
+        }
+        __result.view_{% call swiftifyMethodName argument.name %} = AnyView(MiniTexture({% call swiftifyMethodName argument.name %}))
+        return __result
+    }
+    {% elif argument.type == "buffer" %}
+    func {% call swiftifyMethodName argument.name %}(_ {% call swiftifyMethodName argument.name %}: MTLBuffer?, offset: Int = 0) -> Self {
+        var __result = self
+        __result.set_{% call swiftifyMethodName argument.name %} = { argumentEncoder in
+            argumentEncoder.{% call swiftifyMethodName argument.name %}({% call swiftifyMethodName argument.name %}, offset: offset)
+        }
+        __result.view_{% call swiftifyMethodName argument.name %} = AnyView(MiniBuffer({% call swiftifyMethodName argument.name %}))
+        return __result
+    }
+
+    func {% call swiftifyMethodName argument.name %}(_ {% call swiftifyMethodName argument.name %}: UnsafeRawPointer, length: Int) -> Self {
+        var __result = self
+        __result.set_{% call swiftifyMethodName argument.name %} = { argumentEncoder in
+            argumentEncoder.{% call swiftifyMethodName argument.name %}({% call swiftifyMethodName argument.name %}, length: length)
+        }
+        let start = {% call swiftifyMethodName argument.name %}.bindMemory(to: {{argument.bufferDataType.swiftName}}.self, capacity: length)
+        let buffer = UnsafeBufferPointer(start: start, count: length / MemoryLayout<{{argument.bufferDataType.swiftName}}>.stride)
+        let array = Array(buffer)
+        __result.view_{% call swiftifyMethodName argument.name %} = AnyView(Text(String(describing: array)))
+        return __result
+    }
+
+    func {% call swiftifyMethodName argument.name %}(_ {% call swiftifyMethodName argument.name %}: UnsafeBufferPointer<{{argument.bufferDataType.swiftName}}>) -> Self {
+        var __result = self
+        __result.set_{% call swiftifyMethodName argument.name %} = { argumentEncoder in
+            argumentEncoder.{% call swiftifyMethodName argument.name %}({% call swiftifyMethodName argument.name %})
+        }
+        let array = Array({% call swiftifyMethodName argument.name %})
+        __result.view_{% call swiftifyMethodName argument.name %} = AnyView(Text(String(describing: array)))
+        return __result
+    }
+
+    func {% call swiftifyMethodName argument.name %}(_ {% call swiftifyMethodName argument.name %}: Array<{{argument.bufferDataType.swiftName}}>) -> Self {
+        var __result = self
+        __result.set_{% call swiftifyMethodName argument.name %} = { argumentEncoder in
+            argumentEncoder.{% call swiftifyMethodName argument.name %}({% call swiftifyMethodName argument.name %})
+        }
+        __result.view_{% call swiftifyMethodName argument.name %} = AnyView(Text(String(describing: {% call swiftifyMethodName argument.name %})))
+        return __result
+    }
+
+    func {% call swiftifyMethodName argument.name %}(_ {% call swiftifyMethodName argument.name %}: {{argument.bufferDataType.swiftName}}) -> Self {
+        var __result = self
+        __result.set_{% call swiftifyMethodName argument.name %} = { argumentEncoder in
+            argumentEncoder.{% call swiftifyMethodName argument.name %}({% call swiftifyMethodName argument.name %})
+        }
+        __result.view_{% call swiftifyMethodName argument.name %} = AnyView(Text("\({% call swiftifyMethodName argument.name %})"))
+        return __result
+    }
+    {% endif %}
+
+    {% endfor %}
+    var body: some View {
+        HStack {
+            Text("{{function.name}}")
+            Spacer()
+            {% for argument in function.arguments %}
+            view_{% call swiftifyMethodName argument.name %}
+            {% endfor %}
+        }
+    }
+
+    func encode(commandBuffer: MTLCommandBuffer, library: MTLLibrary) {
+        let encoder = {{ function.name|snakeToCamelCase }}Encoder(library: library)
+        if let arguments = encoder?.commandBuffer(commandBuffer) {
+            {% for argument in function.arguments %}
+            set_{% call swiftifyMethodName argument.name %}?(arguments)
+            {% endfor %}
+            arguments.dispatch(threadsPerGrid!)
+        }
+    }
+}
+
+{% endfor %}

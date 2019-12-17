@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9E8118AD23A7C69000666177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8118AC23A7C69000666177 /* AppDelegate.swift */; };
+		9E8118BE23A7C69000666177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8118BD23A7C69000666177 /* AppDelegate.swift */; };
+		9E8118CB23A7C69000666177 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E8118A423A7C69000666177 /* Assets.xcassets */; };
+		9E8118CC23A7C69000666177 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E8118A423A7C69000666177 /* Assets.xcassets */; };
+		9E8118E923A7C85D00666177 /* MetalSmith in Frameworks */ = {isa = PBXBuildFile; productRef = 9E8118E823A7C85D00666177 /* MetalSmith */; };
+		9E8118EB23A7C85D00666177 /* MetalSmithUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9E8118EA23A7C85D00666177 /* MetalSmithUI */; };
+		9E8118ED23A7C86700666177 /* MetalSmith in Frameworks */ = {isa = PBXBuildFile; productRef = 9E8118EC23A7C86700666177 /* MetalSmith */; };
+		9E8118EF23A7C86700666177 /* MetalSmithUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9E8118EE23A7C86700666177 /* MetalSmithUI */; };
+		9E8118F123A7C94E00666177 /* mtlsmith in Frameworks */ = {isa = PBXBuildFile; productRef = 9E8118F023A7C94E00666177 /* mtlsmith */; };
+		9E8118F323A7C9E400666177 /* mtlsmith in Frameworks */ = {isa = PBXBuildFile; productRef = 9E8118F223A7C9E400666177 /* mtlsmith */; };
+		9E8118FB23A7CFFE00666177 /* Encoder.stencil in Resources */ = {isa = PBXBuildFile; fileRef = 9E8118F923A7CFFE00666177 /* Encoder.stencil */; };
+		9E8118FC23A7CFFE00666177 /* View.stencil in Resources */ = {isa = PBXBuildFile; fileRef = 9E8118FA23A7CFFE00666177 /* View.stencil */; };
+		9E81190423A7D05200666177 /* AddArrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E81190023A7D05100666177 /* AddArrays.swift */; };
+		9E81190523A7D05200666177 /* AddArrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E81190023A7D05100666177 /* AddArrays.swift */; };
+		9E81190623A7D05200666177 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E81190123A7D05100666177 /* Colors.swift */; };
+		9E81190723A7D05200666177 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E81190123A7D05100666177 /* Colors.swift */; };
+		9E81191023A7D06400666177 /* AddArrays.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9E81190C23A7D06300666177 /* AddArrays.metal */; };
+		9E81191123A7D06400666177 /* AddArrays.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9E81190C23A7D06300666177 /* AddArrays.metal */; };
+		9E81191223A7D06400666177 /* Colors.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9E81190D23A7D06300666177 /* Colors.metal */; };
+		9E81191323A7D06400666177 /* Colors.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9E81190D23A7D06300666177 /* Colors.metal */; };
+		9E81191623A7D06400666177 /* HelloTriangle.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9E81190F23A7D06400666177 /* HelloTriangle.metal */; };
+		9E81191723A7D06400666177 /* HelloTriangle.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9E81190F23A7D06400666177 /* HelloTriangle.metal */; };
+		9E81191A23A7D0C600666177 /* Encoder.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E81191823A7D0C600666177 /* Encoder.generated.swift */; };
+		9E81191B23A7D0C600666177 /* Encoder.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E81191823A7D0C600666177 /* Encoder.generated.swift */; };
+		9E81191C23A7D0C600666177 /* View.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E81191923A7D0C600666177 /* View.generated.swift */; };
+		9E81191D23A7D0C600666177 /* View.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E81191923A7D0C600666177 /* View.generated.swift */; };
+		9E81191F23A851B200666177 /* DynamicLibraryLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E81191E23A851B200666177 /* DynamicLibraryLoading.swift */; };
+		9E81192123A8532E00666177 /* HelloTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E81192023A8532E00666177 /* HelloTriangle.swift */; };
+		9E81192223A853B900666177 /* HelloTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E81192023A8532E00666177 /* HelloTriangle.swift */; };
+		9E81194A23A8EED500666177 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E81194823A8EED500666177 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9E8118A423A7C69000666177 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9E8118A923A7C69000666177 /* MetalSmithDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalSmithDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E8118AC23A7C69000666177 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9E8118B623A7C69000666177 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E8118BB23A7C69000666177 /* MetalSmithDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalSmithDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E8118BD23A7C69000666177 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9E8118C423A7C69000666177 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E8118F923A7CFFE00666177 /* Encoder.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Encoder.stencil; sourceTree = "<group>"; };
+		9E8118FA23A7CFFE00666177 /* View.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = View.stencil; sourceTree = "<group>"; };
+		9E81190023A7D05100666177 /* AddArrays.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddArrays.swift; sourceTree = "<group>"; };
+		9E81190123A7D05100666177 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		9E81190C23A7D06300666177 /* AddArrays.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = AddArrays.metal; sourceTree = "<group>"; };
+		9E81190D23A7D06300666177 /* Colors.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Colors.metal; sourceTree = "<group>"; };
+		9E81190F23A7D06400666177 /* HelloTriangle.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = HelloTriangle.metal; sourceTree = "<group>"; };
+		9E81191823A7D0C600666177 /* Encoder.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encoder.generated.swift; sourceTree = "<group>"; };
+		9E81191923A7D0C600666177 /* View.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.generated.swift; sourceTree = "<group>"; };
+		9E81191E23A851B200666177 /* DynamicLibraryLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicLibraryLoading.swift; sourceTree = "<group>"; };
+		9E81192023A8532E00666177 /* HelloTriangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloTriangle.swift; sourceTree = "<group>"; };
+		9E81194923A8EED500666177 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../Test/Test/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9E8118A623A7C69000666177 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E8118EB23A7C85D00666177 /* MetalSmithUI in Frameworks */,
+				9E8118E923A7C85D00666177 /* MetalSmith in Frameworks */,
+				9E8118F323A7C9E400666177 /* mtlsmith in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E8118B823A7C69000666177 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E8118EF23A7C86700666177 /* MetalSmithUI in Frameworks */,
+				9E8118ED23A7C86700666177 /* MetalSmith in Frameworks */,
+				9E8118F123A7C94E00666177 /* mtlsmith in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9E81189B23A7C68E00666177 = {
+			isa = PBXGroup;
+			children = (
+				9E8118A023A7C68E00666177 /* MetalSmithDemo Shared */,
+				9E8118AB23A7C69000666177 /* MetalSmithDemo iOS */,
+				9E8118BC23A7C69000666177 /* MetalSmithDemo macOS */,
+				9E8118AA23A7C69000666177 /* Products */,
+				9E8118E723A7C85D00666177 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9E8118A023A7C68E00666177 /* MetalSmithDemo Shared */ = {
+			isa = PBXGroup;
+			children = (
+				9E8118D623A7C78900666177 /* AutoGenerated */,
+				9E8118D523A7C78300666177 /* Templates */,
+				9E81190023A7D05100666177 /* AddArrays.swift */,
+				9E81190123A7D05100666177 /* Colors.swift */,
+				9E81192023A8532E00666177 /* HelloTriangle.swift */,
+				9E81190C23A7D06300666177 /* AddArrays.metal */,
+				9E81190D23A7D06300666177 /* Colors.metal */,
+				9E81190F23A7D06400666177 /* HelloTriangle.metal */,
+				9E8118A423A7C69000666177 /* Assets.xcassets */,
+			);
+			path = "MetalSmithDemo Shared";
+			sourceTree = "<group>";
+		};
+		9E8118AA23A7C69000666177 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9E8118A923A7C69000666177 /* MetalSmithDemo.app */,
+				9E8118BB23A7C69000666177 /* MetalSmithDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9E8118AB23A7C69000666177 /* MetalSmithDemo iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9E8118AC23A7C69000666177 /* AppDelegate.swift */,
+				9E8118B623A7C69000666177 /* Info.plist */,
+			);
+			path = "MetalSmithDemo iOS";
+			sourceTree = "<group>";
+		};
+		9E8118BC23A7C69000666177 /* MetalSmithDemo macOS */ = {
+			isa = PBXGroup;
+			children = (
+				9E8118BD23A7C69000666177 /* AppDelegate.swift */,
+				9E81194823A8EED500666177 /* Main.storyboard */,
+				9E81191E23A851B200666177 /* DynamicLibraryLoading.swift */,
+				9E8118C423A7C69000666177 /* Info.plist */,
+			);
+			path = "MetalSmithDemo macOS";
+			sourceTree = "<group>";
+		};
+		9E8118D523A7C78300666177 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				9E8118F923A7CFFE00666177 /* Encoder.stencil */,
+				9E8118FA23A7CFFE00666177 /* View.stencil */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+		9E8118D623A7C78900666177 /* AutoGenerated */ = {
+			isa = PBXGroup;
+			children = (
+				9E81191823A7D0C600666177 /* Encoder.generated.swift */,
+				9E81191923A7D0C600666177 /* View.generated.swift */,
+			);
+			path = AutoGenerated;
+			sourceTree = "<group>";
+		};
+		9E8118E723A7C85D00666177 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9E8118A823A7C69000666177 /* MetalSmithDemo iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E8118CF23A7C69000666177 /* Build configuration list for PBXNativeTarget "MetalSmithDemo iOS" */;
+			buildPhases = (
+				9E8118F423A7C9EE00666177 /* ShellScript */,
+				9E8118A523A7C69000666177 /* Sources */,
+				9E8118A623A7C69000666177 /* Frameworks */,
+				9E8118A723A7C69000666177 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MetalSmithDemo iOS";
+			packageProductDependencies = (
+				9E8118E823A7C85D00666177 /* MetalSmith */,
+				9E8118EA23A7C85D00666177 /* MetalSmithUI */,
+				9E8118F223A7C9E400666177 /* mtlsmith */,
+			);
+			productName = "MetalSmithDemo iOS";
+			productReference = 9E8118A923A7C69000666177 /* MetalSmithDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9E8118BA23A7C69000666177 /* MetalSmithDemo macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E8118D223A7C69000666177 /* Build configuration list for PBXNativeTarget "MetalSmithDemo macOS" */;
+			buildPhases = (
+				9E9CCBFD23A909F60039BDFD /* ShellScript */,
+				9E8118B723A7C69000666177 /* Sources */,
+				9E8118B823A7C69000666177 /* Frameworks */,
+				9E8118B923A7C69000666177 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MetalSmithDemo macOS";
+			packageProductDependencies = (
+				9E8118EC23A7C86700666177 /* MetalSmith */,
+				9E8118EE23A7C86700666177 /* MetalSmithUI */,
+				9E8118F023A7C94E00666177 /* mtlsmith */,
+			);
+			productName = "MetalSmithDemo macOS";
+			productReference = 9E8118BB23A7C69000666177 /* MetalSmithDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9E81189C23A7C68E00666177 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Nick Kallen";
+				TargetAttributes = {
+					9E8118A823A7C69000666177 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					9E8118BA23A7C69000666177 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = 9E81189F23A7C68E00666177 /* Build configuration list for PBXProject "MetalSmithDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9E81189B23A7C68E00666177;
+			productRefGroup = 9E8118AA23A7C69000666177 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9E8118A823A7C69000666177 /* MetalSmithDemo iOS */,
+				9E8118BA23A7C69000666177 /* MetalSmithDemo macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9E8118A723A7C69000666177 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E8118FC23A7CFFE00666177 /* View.stencil in Resources */,
+				9E8118CB23A7C69000666177 /* Assets.xcassets in Resources */,
+				9E8118FB23A7CFFE00666177 /* Encoder.stencil in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E8118B923A7C69000666177 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E8118CC23A7C69000666177 /* Assets.xcassets in Resources */,
+				9E81194A23A8EED500666177 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9E8118F423A7C9EE00666177 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "MTLSMITH_PATH=$TARGET_BUILD_DIR/../$CONFIGURATION/mtlsmith\n\n\"$MTLSMITH_PATH\" --sources $SRCROOT --templates $SRCROOT/MetalSmithDemo\\ Shared/Templates --output $SRCROOT/MetalSmithDemo\\ Shared/AutoGenerated\n";
+		};
+		9E9CCBFD23A909F60039BDFD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "MTLSMITH_PATH=$TARGET_BUILD_DIR/../$CONFIGURATION/mtlsmith\n\n\"$MTLSMITH_PATH\" --sources $SRCROOT --templates $SRCROOT/MetalSmithDemo\\ Shared/Templates --output $SRCROOT/MetalSmithDemo\\ Shared/AutoGenerated\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9E8118A523A7C69000666177 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E81191023A7D06400666177 /* AddArrays.metal in Sources */,
+				9E81190623A7D05200666177 /* Colors.swift in Sources */,
+				9E81190423A7D05200666177 /* AddArrays.swift in Sources */,
+				9E81191623A7D06400666177 /* HelloTriangle.metal in Sources */,
+				9E8118AD23A7C69000666177 /* AppDelegate.swift in Sources */,
+				9E81191A23A7D0C600666177 /* Encoder.generated.swift in Sources */,
+				9E81192223A853B900666177 /* HelloTriangle.swift in Sources */,
+				9E81191223A7D06400666177 /* Colors.metal in Sources */,
+				9E81191C23A7D0C600666177 /* View.generated.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E8118B723A7C69000666177 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E81191123A7D06400666177 /* AddArrays.metal in Sources */,
+				9E81192123A8532E00666177 /* HelloTriangle.swift in Sources */,
+				9E81190723A7D05200666177 /* Colors.swift in Sources */,
+				9E81190523A7D05200666177 /* AddArrays.swift in Sources */,
+				9E81191723A7D06400666177 /* HelloTriangle.metal in Sources */,
+				9E8118BE23A7C69000666177 /* AppDelegate.swift in Sources */,
+				9E81191B23A7D0C600666177 /* Encoder.generated.swift in Sources */,
+				9E81191323A7D06400666177 /* Colors.metal in Sources */,
+				9E81191F23A851B200666177 /* DynamicLibraryLoading.swift in Sources */,
+				9E81191D23A7D0C600666177 /* View.generated.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9E81194823A8EED500666177 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E81194923A8EED500666177 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9E8118CD23A7C69000666177 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9E8118CE23A7C69000666177 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		9E8118D023A7C69000666177 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G3GUW83N5R;
+				INFOPLIST_FILE = "MetalSmithDemo iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nk.MetalSmithDemo;
+				PRODUCT_NAME = MetalSmithDemo;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9E8118D123A7C69000666177 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G3GUW83N5R;
+				INFOPLIST_FILE = "MetalSmithDemo iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nk.MetalSmithDemo;
+				PRODUCT_NAME = MetalSmithDemo;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9E8118D323A7C69000666177 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = G3GUW83N5R;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "MetalSmithDemo macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nk.MetalSmithDemo;
+				PRODUCT_NAME = MetalSmithDemo;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		9E8118D423A7C69000666177 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = G3GUW83N5R;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "MetalSmithDemo macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nk.MetalSmithDemo;
+				PRODUCT_NAME = MetalSmithDemo;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9E81189F23A7C68E00666177 /* Build configuration list for PBXProject "MetalSmithDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E8118CD23A7C69000666177 /* Debug */,
+				9E8118CE23A7C69000666177 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E8118CF23A7C69000666177 /* Build configuration list for PBXNativeTarget "MetalSmithDemo iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E8118D023A7C69000666177 /* Debug */,
+				9E8118D123A7C69000666177 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E8118D223A7C69000666177 /* Build configuration list for PBXNativeTarget "MetalSmithDemo macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E8118D323A7C69000666177 /* Debug */,
+				9E8118D423A7C69000666177 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9E8118E823A7C85D00666177 /* MetalSmith */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MetalSmith;
+		};
+		9E8118EA23A7C85D00666177 /* MetalSmithUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MetalSmithUI;
+		};
+		9E8118EC23A7C86700666177 /* MetalSmith */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MetalSmith;
+		};
+		9E8118EE23A7C86700666177 /* MetalSmithUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MetalSmithUI;
+		};
+		9E8118F023A7C94E00666177 /* mtlsmith */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = mtlsmith;
+		};
+		9E8118F223A7C9E400666177 /* mtlsmith */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = mtlsmith;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 9E81189C23A7C68E00666177 /* Project object */;
+}
