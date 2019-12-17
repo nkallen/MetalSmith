@@ -179,7 +179,8 @@
 				9E9CCC0123A91B0D0039BDFD /* livecoding.gif */,
 				9E9CCC0323A91B570039BDFD /* add-arrays.png */,
 			);
-			path = Resources;
+			name = Resources;
+			path = ../Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
